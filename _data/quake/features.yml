@@ -67,7 +67,7 @@
   image: powerups.jpg
 
 - label: Blessed Armor
-  description: New tech enables armor to self-repair over time, if you surive
+  description: New tech enables armor to self-repair over time, if you survive
   image: recharge.jpg
 
 - label: Melee Attacks
