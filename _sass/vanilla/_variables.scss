@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Exocet';
+  src: url('https://d2cu.be/fonts/exocet.woff2') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formal436';
+  src: url('../../fonts/Formal436.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-normal()
+{
+	font-family: 'Formal436';
+  text-transform: none;
+}
+
+@mixin font-fancy()
+{
+	font-family: 'Exocet', 'Formal436';
+	font-weight: 700;
+  text-transform: uppercase;
+}

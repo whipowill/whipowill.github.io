@@ -1,0 +1,49 @@
+@mixin mobile()
+{
+	* {
+		border-left: none !important;
+		border-right: none !important;
+		border-bottom: none !important;
+	}
+	footer#bottom {
+		padding: 0 !important;
+		margin: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	header#top {
+		div.avatar {
+			width: 80px !important;
+			height: 80px !important;
+		}
+		h1 {
+			font-size: 2em !important;
+		}
+	}
+	nav {
+		text-align: left !important;
+	}
+	div.top {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+	div.bottom {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		&.right {
+			padding-bottom: 100px !important;
+		}
+	}
+}
+
+@media all and (max-width: 1199px) {
+	@include mobile();
+}
+@media all and (max-width: 991px) {
+	@include mobile();
+}
+@media all and (max-width: 768px) {
+	@include mobile();
+}
+@media all and (max-width: 575px) {
+	@include mobile();
+}

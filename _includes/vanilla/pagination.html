@@ -1,0 +1,14 @@
+<div class="pagination">
+	<div class="page_number">
+		Page {{ paginator.page }} of {{ paginator.total_pages }}
+	</div>
+	<ul class="page_navigation">
+		{% if paginator.previous_page %}
+			<li><a href="{{ paginator.previous_page_path }}"><i class="ss-icon ss-standard ss-left"></i></a></li>
+		{% endif %}
+		<li><a href="{{ '/' | relative_url }}"><i class="ss-icon ss-standard ss-up"></i></a></li>
+		{% if paginator.next_page %}
+			<li><a href="{{ paginator.next_page_path }}"><i class="ss-icon ss-standard ss-right"></i></a></li>
+		{% endif %}
+	</ul>
+</div>

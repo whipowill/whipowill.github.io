@@ -1,0 +1,83 @@
+- label: Multiplayer Bots
+  description: Add robot players to deathmatch, teamplay, and coop games
+  image: bots1.jpg
+
+- label: Blood & Gore
+  description: Bathe in the blood of your enemies w/ scalable gore setting
+  image: gore1.jpg
+
+- label: Copper Tweaks
+  description: All the vanilla improvements from <a href="http://lunaran.com/copper/" target="_blank">Copper</a> mod (v1.20)
+  image: copper.jpg
+
+- label: Perfect Balance
+  description: Find the perfect balance w/ configurable weapons
+  image: balance.jpg
+
+- label: Item Resupply
+  description: Force items to respawn in singleplayer and coop games
+  image: resupply.jpg
+
+- label: Name Tags
+  description: See other player names Halo-style when aiming at them
+  image: nametags.jpg
+
+- label: Foot Steps
+  description: Hear your boots touch the ground as you stalk your prey
+  image: footsteps.jpg
+
+- label: Score Keeper
+  description: Make teamplay games combine scores to achieve fraglimit
+  image: teamscore.jpg
+
+- label: Death Timeout
+  description: When you die you have to sit out until mandatory delay is over
+  image: timeout.jpg
+
+- label: Persistent Corpses
+  description: Player corpses stick around for a bit before disappearing
+  image: corpse.jpg
+
+- label: No Autoswitch
+  description: Picking up new weapons won't autoswitch anymore
+  image: noauto.jpg
+
+- label: Visible Weapons
+  description: Force weapons to drop visibly outside the backpack
+  image: visible.jpg
+
+- label: Nail Speed
+  description: Make nails travel instantly, like a gun instead of a water hose
+  image: hitscan.jpg
+
+- label: Melee Attacks
+  description: Perform a melee attack w/out switching weapons
+  image: melee.jpg
+
+- label: Hand Grenades
+  description: Toss a hand grenade down the hall w/out switching weapons
+  image: grenades.jpg
+
+- label: Custom Loadouts
+  description: Replace every weapon and ammo crate in the game w/ what you want
+  image: custom.jpg
+
+- label: Killing Spree
+  description: Game announces when you're on a killstreak and when it ends
+  image: killstreak.jpg
+
+- label: Glory Kills
+  description: Melee attacks and killstreaks grant extra stimpack rewards
+  image: shards.jpg
+
+- label: Highlander Games
+  description: Higher their killstreak, greater the reward for taking their head
+  image: highlander1.jpg
+
+- label: Random Powerups
+  description: Every kill has a chance to drop a random powerup
+  image: powerups.jpg
+
+- label: Shield Recharge
+  description: Survive the battle and your shield will begin to recharge
+  image: recharge.jpg

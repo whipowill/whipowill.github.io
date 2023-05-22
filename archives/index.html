@@ -1,0 +1,48 @@
+---
+layout: vanilla/default
+title: Archives
+description: Some things are best left forgotten.
+---
+
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				{% include vanilla/header.html %}
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				{% include vanilla/nav.html %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<footer id="bottom">
+
+				</footer>
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<div class="posts">
+					<ul>
+						{% for post in paginator.posts %}
+							<li>
+								<date>{{ post.date | date: '%B %d, %Y' }}</date>
+								<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+								<p>{{ post.excerpt }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+					{% include vanilla/pagination.html %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

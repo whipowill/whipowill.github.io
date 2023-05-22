@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- meta -->
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- social media -->
+	    <meta name="twitter:title" content="Quake // {{ page.title }}">
+	    <meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta property="twitter:image" content="{{ 'assets/img/quake/scarlet_logo.png' | relative_url }}">
+	    <meta property="og:image" content="{{ 'assets/img/quake/scarlet_logo.png' | relative_url }}">
+
+	    <!-- title -->
+	    <title>Quake // {{ page.title }}</title>
+	    <meta name="description" content="{{ page.description }}">
+
+	    <!-- icons -->
+	    <link rel="shortcut icon" href="">
+	    <link rel="apple-touch-icon" href="">
+
+	    <!-- stylesheets -->
+	    <link href="{{ 'assets/css/quake/style.css' | relative_url }}" rel="stylesheet">
+	    <link href="{{ 'assets/css/quake/print.css' | relative_url }}" rel="stylesheet" media="print">
+	    <link href="{{ 'assets/misc/ss-social-circle/webfonts/ss-social-circle.css' | relative_url }}" rel="stylesheet">
+
+	    <!-- rss -->
+	    <link rel="alternate" type="application/rss+xml" href="">
+
+	    <!-- script -->
+	    <script>
+		</script>
+
+	</head>
+	<body>
+
+		<header id="top">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<h1><img src="{{ 'assets/img/quake/logo2.png' | relative_url }}" alt="Scarlet"></h1>
+						<nav>
+							<ul>
+								<li><a href="{{ 'quake#about' | relative_url }}">About</a></li>
+								<li><a href="{{ 'quake#features' | relative_url }}">Features</a></li>
+								<li><a href="{{ 'quake#maps' | relative_url }}">Maps</a></li>
+								<li><a href="{{ 'quake#download' | relative_url }}">Download</a></li>
+								<li><a href="{{ 'quake#credits' | relative_url }}">Credits</a></li>
+							</ul>
+						</nav>
+						<p class="big">A Quake mod for adding bots, blood, guts, and gore to the game. Designed for the multiplayer enthusiast, sate your bloodlust with heart-pumping multiplayer games on demand.</p>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section id="splash">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<div id="video">
+							<iframe src="{{ page.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+						{% include quake/footer.html %}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="section">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<h2 class="center">About</h2>
+						<p class="center big red">Stay awhile and listen.</p>
+						<div class="columns is-centered">
+							<div class="column">
+								<h3>Vision & Goals</h2>
+							</div>
+							<div class="column">
+								<p>This is an attempt to preserve an FPS classic.  In a world where real-life players have moved on, I wanted to capture and keep the multiplayer experience of the past.</p>
+								<p>What <a href="https://brutal-doom.com/" target="_blank">Brutal</a> is for singleplayer Doom, I want Scarlet to be for multiplayer Quake.  More blood, more gore, more guts, and maybe a little more glory than it had before.</p>
+								<p class="signature"><a href="{{ '/' | relative_url }}" target="_blank" class="red">&mdash; Will Scarlet</a></p>
+							</div>
+						</div>
+						<div class="columns is-centered">
+							<div class="column">
+								<ul>
+									<li><b>Multiplayer</b> &mdash; Preserve the deathmatch experience of the past</li>
+									<li><b>Blood & Gore</b> &mdash; Dial up the gore to gratify my thirst for blood and violence</li>
+									<li><b>Fixes & Tweaks</b> &mdash; Fix all the little broken things that bothered me</li>
+								</ul>
+							</div>
+							<div class="column">
+								<ul>
+									<li><b>Weapons Balance</b> &mdash; Improve combat w/ weapon damage and pacing</li>
+									<li><b>Fun Factor</b> &mdash; Add melee attack, grenades, glory kills, and randomness</li>
+									<li><b>Customization</b> &mdash; Unlock the game w/ extensive console variables</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="features" class="section">
+			<div class="container is-fullhd">
+				<div class="columns is-centered">
+					<div class="column">
+						<h2 class="center">Features</h2>
+						<p class="center big red">Every feature is optional and configurable.</p>
+					</div>
+				</div>
+				<div class="columns is-centered is-multiline is-vcentered">
+					{% for feature in site.data.quake.features %}
+						<div class="column is-one-third">
+							<div class="feature">
+								{% if feature.image %}
+									{% assign screenshot = 'assets/img/quake/features/screenshots/' | append: feature.image %}
+									{% assign thumbnail = 'assets/img/quake/features/thumbnails/' | append: feature.image %}
+									<a href="{{ screenshot | relative_url }}" target="_blank" class="photo"><img src="{{ thumbnail | relative_url }}"><div class="overlay"></div></a>
+								{% endif %}
+								<h3>{{ feature.label }}</h3>
+								<p>{{ feature.description }}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+			</div>
+		</section>
+
+		<section id="maps" class="section">
+			<div class="container">
+				<div class="columns is-centered">
+					<div class="column">
+						<h2 class="center">Maps</h2>
+						<p class="center big red">Can't have multiplayer w/out maps to play in.</p>
+					</div>
+				</div>
+				<div class="columns is-multiline">
+					{% for map in site.data.quake.maps %}
+						<div class="column is-one-quarter">
+							<div class="map">
+								{% if map.image %}
+									{% assign screenshot = 'assets/img/quake/maps/screenshots/' | append: map.image %}
+									{% assign thumbnail = 'assets/img/quake/maps/thumbnails/' | append: map.image %}
+									<a href="{{ screenshot | relative_url }}" target="_blank" class="photo"><img src="{{ thumbnail | relative_url }}"><div class="overlay"></div></a>
+								{% endif %}
+								<h3>{{ map.label }}</h3>
+								<p>{{ map.author }} <span>{{ map.year }}</span> <b>{{ map.code }}</b></p>
+							</div>
+						</div>
+					{% endfor %}
+					<div class="column">
+						<p>For an exhaustive list of great multiplayer maps, tested by yours truly and ranked by tier, checkout my Quake <a href="https://github.com/whipowill/quake-dir" target="_blank">directory</a> page.</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="download" class="section">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<h2 class="center">Download</h2>
+						<p class="center big red">It looks complicated, but hopefully it's not.</p>
+						<div class="columns">
+							<div class="column">
+								<h3>Resources</h3>
+								<p>Some links to the various resources involved in this project, including my game directory, and other files you may need.</p>
+							</div>
+							<div class="column">
+								<ul>
+									<li><a href="https://github.com/whipowill/quake-mod-scarlet" target="_blank">Scarlet Mod</a> <span>GitHub</span><br>This is the actual mod by itself w/out any maps or waypoints to play with.</li>
+									<li><a href="https://github.com/whipowill/quake-dir" target="_blank">Quake Directory</a> <span>GitHub</span><br>This is my game directory, which includes all my mods, maps, and waypoints.</li>
+									<li><a href="https://github.com/whipowill/quake-mod-frikbot-waypoints" target="_blank">Waypoints Repository</a> <span>GitHub</span><br>You probably won't need this, but a collection of all waypoints.</li>
+									<li><a href="https://github.com/whipowill/quake-dir/blob/master/scarlet/settings/custom.cfg" target="_blank">Custom Settings</a> <span>GitHub</span><br>Depending on how you install, you might want my custom settings.</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<h3>Checklist</h3>
+								<p>Understand some basics about how this works.  You're just a few steps away from being knee deep in dead.</p>
+							</div>
+							<div class="column">
+								{% capture my_include %}{% include quake/requirements.md %}{% endcapture %}
+								{{ my_include | markdownify }}
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<h3>Method #1</h3>
+								<p>If you already have Quake installed and you want to have control over how you integrate your mods, this is the way for you.</p>
+								<p>This option requires you to familiarize yourself with all the Scarlet <a href="https://github.com/whipowill/quake-mod-scarlet" target="_blank">settings</a> and manually activate the settings you want to have.</p>
+							</div>
+							<div class="column">
+								{% capture my_include %}{% include quake/install_method1.md %}{% endcapture %}
+								{{ my_include | markdownify }}
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<h3>Method #2</h3>
+								<p>If you want to play exactly the way I play then you should use my Quake <a href="https://github.com/whipowill/quake-dir" target="_blank">directory</a>, which I have uploaded in full.</p>
+								<p>This includes all my other mods, maps, waypoints, and custom settings to create the optimal experience.</p>
+							</div>
+							<div class="column">
+								{% capture my_include %}{% include quake/install_method2.md %}{% endcapture %}
+								{{ my_include | markdownify }}
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<h3>Method #3</h3>
+								<p>This is the same outcome as method #2, but elite.  Uses GIT to update any new maps or mod changes that I make, which is often.</p>
+							</div>
+							<div class="column">
+								{% capture my_include %}{% include quake/install_method3.md %}{% endcapture %}
+								{{ my_include | markdownify }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="credits" class="section">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<h2 class="center">Credits</h2>
+						<p class="center big red">Their deeds of valor will be remembered.</p>
+						<div class="columns">
+							<div class="column">
+								<p>Scarlet was only made possible thanks to a modding community whose exhaustive efforts, and notes from long ago, paved the way.</p>
+							</div>
+							<div class="column">
+								{% capture my_include %}{% include quake/credits.md %}{% endcapture %}
+								{{ my_include | markdownify }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="bottom">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered">
+					<div class="column">
+						<p>Coded by<br> <a href="{{ '/' | relative_url }}" target="_blank" class="red">Will Scarlet</a></p>
+						<p class="red">Special thanks to all the old timers who kept the game alive.</p>
+						<p class="small">This mod is created by fans and is not affiliated with or endorsed by ID Software, the creator of Quake. Quake is a registered trademark of ID Software and all rights belong to their respective owners. This mod is provided for personal enjoyment and is not intended for any commercial use. Use this mod at your own risk. The creators of this mod are not responsible for any issues or damages that may occur while using it. Please support the official release of Quake and respect the intellectual property rights of ID Software. Enjoy the mod and keep on fragging!</p>
+						{% include quake/footer.html %}
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

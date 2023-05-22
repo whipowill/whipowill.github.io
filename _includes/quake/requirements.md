@@ -1,0 +1,5 @@
+- This mod only works w/ the [QuakeSpasm](https://qssm.quakeone.com/) client or one of it's derivatives
+- This mod requires a legitimate copy of the Quake game, specifically the ``pak0.pak`` file
+- This mod includes bots which require waypoint files to be able to run properly
+- This mod is extensively <a href="https://github.com/whipowill/quake-mod-scarlet" target="_blank">customizable</a> and involves many settings
+- This page provides 3 installation methods, and you should choose wisely

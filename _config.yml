@@ -1,0 +1,15 @@
+gems: [jekyll-paginate]
+
+baseurl: "/"
+destination: docs
+
+sass:
+  syntax: :scss
+
+permalink: /:year/:month/:day/:title:output_ext
+
+paginate_path: "/archives/page:num/"
+paginate: 5
+
+title: Will Scarlet
+description: I'm a software engineer who enjoys tinkering w/ old games as a hobby.

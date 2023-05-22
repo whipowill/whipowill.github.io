@@ -1,0 +1,7 @@
+- Find your Quake install directory
+- Download this [zipfile](https://github.com/whipowill/quake-mod-scarlet/archive/master.zip) and unzip to ``/path/to/quake/scarlet/``
+- Make sure your ``/path/to/quake/id1/maps/`` folder has all your map files
+- Make sure your ``/path/to/quake/id1/maps/`` folder has all your [waypoint](https://github.com/whipowill/quake-mod-frikbot-waypoints) files
+- Append ``-game scarlet -particles 99999 -listen 16 -condebug`` to your game shortcut
+- Edit your ``autoexec.cfg`` file to activate the Scarlet [settings](https://github.com/whipowill/quake-mod-scarlet) you want to use
+- Play the game

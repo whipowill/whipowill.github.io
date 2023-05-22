@@ -1,0 +1,4 @@
+reset.sh
+*.lock
+.jekyll-cache
+*.map

@@ -1,0 +1,59 @@
+- label: Aerowalk
+  author: Preacher
+  year: 1998
+  image: aerowalk.jpg
+  code: aerowalk
+
+- label: Powder Keg
+  author: Fribbles
+  year: 1998
+  image: powderkeg.jpg
+  code: fribdev1_2
+
+- label: Malevolent Marmalade
+  author: Molevola
+  year: 2006
+  image: marmalade.jpg
+  code: maldm6
+
+- label: Nova
+  author: Alice
+  year: 2022
+  image: nova.jpg
+  code: nova
+
+- label: Spine
+  author: Headshot
+  year: 1998
+  image: spine.jpg
+  code: spinev2
+
+- label: Ultra Violence
+  author: Escher
+  year: 1997
+  image: ultrav.jpg
+  code: ultrav
+
+- label: Doomed
+  author: Zaka
+  year: 2009
+  image: doomed.jpg
+  code: doomed
+
+- label: Quake Addiction
+  author: Peej
+  year: 1999
+  image: addiction.jpg
+  code: strafin6
+
+- label: Shine
+  author: Zxc
+  year: 2001
+  image: shine.jpg
+  code: zxcdm1
+
+- label: Skull
+  author: Zaka
+  year: 2003
+  image: skull.jpg
+  code: skull

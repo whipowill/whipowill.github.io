@@ -1,0 +1,68 @@
+---
+layout: vanilla/default
+title: Software Engineer
+description: I'm a software engineer who enjoys tinkering w/ old games as a hobby.
+---
+
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				{% include vanilla/header.html %}
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				{% include vanilla/nav.html %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<section class="middle">
+					<div class="big">
+						<p>I'm a software engineer who enjoys tinkering w/ old games as a hobby.</p>
+					</div>
+					<h2>Games of Interest</h2>
+					<ul class="list">
+						<li>Dune 2 <span>1992</span></li>
+						<li>Doom 2 <span>1994</span></li>
+						<li>Command & Conquer <span>1995</span></li>
+						<li>Quake <span>1996</span></li>
+						<li>Age of Empires 2 <span>1999</span></li>
+						<li>Diablo 2 <span>2000</span></li>
+						<li>Halo <span>2001</span></li>
+					</ul>
+
+					<h2>Special Projects</h2>
+					<ul class="list">
+						<li><a href="{{ 'quake' | relative_url }}" target="_blank">Scarlet</a> <span>Quake</span></li>
+						<li><a href="https://github.com/whipowill/d2-plugy-qol" target="_blank">Quality of Life</a> <span>Diablo 2</span></li>
+					</ul>
+				</section>
+				{% include vanilla/footer.html %}
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<section class="middle">
+					<div class="posts">
+						<ul>
+							{% for post in site.posts limit:5 %}
+								<li>
+									<date>{{ post.date | date: '%B %d, %Y' }}</date>
+									<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+									<p>{{ post.excerpt }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
