@@ -30,10 +30,6 @@
   description: Make teamplay games combine scores to achieve fraglimit
   image: teamscore.jpg
 
-- label: Death Timeout
-  description: When you die you have to sit out until mandatory delay is over
-  image: timeout.jpg
-
 - label: Persistent Corpses
   description: Player corpses stick around for a bit before disappearing
   image: corpse.jpg
@@ -49,14 +45,6 @@
 - label: Nail Speed
   description: Make nails travel instantly, like a gun instead of a water hose
   image: hitscan.jpg
-
-- label: Melee Attacks
-  description: Perform a melee attack w/out switching weapons
-  image: melee.jpg
-
-- label: Hand Grenades
-  description: Toss a hand grenade down the hall w/out switching weapons
-  image: grenades.jpg
 
 - label: Custom Loadouts
   description: Replace every weapon and ammo crate in the game w/ what you want
@@ -81,3 +69,11 @@
 - label: Shield Recharge
   description: Survive the battle and your shield will begin to recharge
   image: recharge.jpg
+
+- label: Melee Attacks
+  description: Perform a melee attack w/out switching weapons
+  image: melee.jpg
+
+- label: Hand Grenades
+  description: Toss a hand grenade down the hall w/out switching weapons
+  image: grenades.jpg
