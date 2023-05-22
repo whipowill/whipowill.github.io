@@ -66,8 +66,8 @@
   description: Every kill has a chance to drop a random powerup
   image: powerups.jpg
 
-- label: Enchanted Armor
-  description: New tech enables armors to self-repair over time, if you surive
+- label: Blessed Armor
+  description: New tech enables armor to self-repair over time, if you surive
   image: recharge.jpg
 
 - label: Melee Attacks
