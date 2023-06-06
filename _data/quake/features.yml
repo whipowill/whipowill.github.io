@@ -77,3 +77,7 @@
 - label: Hand Grenades
   description: Toss a hand grenade down the hall w/out switching weapons
   image: grenades.jpg
+
+- label: Death Tracker
+  description: You think you're good, but how good are you really?
+  image: deaths_tracker.jpg
