@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- meta -->
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- social media -->
+	    <meta name="twitter:title" content="'">
+	    <meta name="twitter:description" content="">
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta property="twitter:image" content="">
+	    <meta property="og:image" content="">
+
+	    <!-- title -->
+	    <title>Will Scarlet // Terraria (2011)</title>
+	    <meta name="description" content="">
+
+	    <!-- icons -->
+	    <link rel="shortcut icon" href="/assets/img/dune2_icon.ico">
+	    <link rel="apple-touch-icon" href="/assets/img/dune2_icon.png">
+
+	    <!-- stylesheets -->
+	    <link href="/assets/css/vanilla/style.css?v=1727489473" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727489473" rel="stylesheet" media="print">
+	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
+	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
+
+	    <!-- rss -->
+	    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+	    <!-- script -->
+	    <script>
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				<header id="top">
+	<a href="/">
+		<div class="avatar"><img src="/assets/img/vanilla/dune2_icon_huge.png"></div>
+		<h1>Will<br> Scarlet</h1>
+	</a>
+</header>
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/games">Games</a></li>
+	</ul>
+</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<div class="post">
+					<date>September 25, 2024</date>
+					<h1>Terraria (2011)</h1>
+					<p class="excerpt">The platformer I wish I had as a kid.</p>
+					
+						<ul class="tags">
+							
+								<li>
+									<a>linux</a>
+								</li>
+							
+								<li>
+									<a>platformer</a>
+								</li>
+							
+								<li>
+									<a>multiplayer</a>
+								</li>
+							
+						</ul>
+					
+				</div>
+				<footer id="bottom">
+				</footer>
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<div class="post">
+					
+						<a href="/assets/img/vanilla/screenshots/terraria.png" target="_blank"><img class="heroimage" src="/assets/img/vanilla/screenshots/terraria.png" alt="Terraria (2011)"></a>
+						<div class="space"></div>
+					
+					
+						
+					
+					<p class="caption">Screenshot from when I used to play this on Mac, a long, long, time ago.</p>
+
+<p class="caption">WARNING!  These install instructions require a high degree of nerdery, involving Terminal commands, shell scripts, TMUX sessions, and more.</p>
+
+<h2 id="intro">Intro</h2>
+
+<p>There has always been something special about Terraria.  It has a vibe that’s easy to relax to.  That <a href="https://www.youtube.com/watch?v=ie3wHI5JYKM">rain</a> soundtrack hits the spot.</p>
+
+<p>For the game being as old as it is, it’s changed quite a bit.  The version I like to play is 1.3.5.3 (released 2017).</p>
+
+<p>(Felt like the defeat of the Moon Lord should have been the end of the game.)</p>
+
+<p>This older version of the game is Linux native and is much less resource intensive on my machine than the newer 1.4 versions.</p>
+
+<p>Terraria is a family favorite w/ my kids.  It’s loads of fun to start a playthru on a dedicated server and roll thru the game together.</p>
+
+<p>I’ll show you how I do it at my house.</p>
+
+<h2 id="install">Install</h2>
+
+<p>You’re looking for the Linux installer for 1.3.5.3, which can be hard to find, but if you know where to look you can find it.</p>
+
+<p>The install file is a shell script, which you can run from Terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/installer/
+$ sh installer.sh
+</code></pre></div></div>
+
+<p>Once you run this, a visual installer UI will open up and guide you thru the process.</p>
+
+<h2 id="amending-the-start-script">Amending The Start Script</h2>
+
+<p>Once installed, you’re going to have a <code class="language-plaintext highlighter-rouge">start.sh</code> file in the game directory.  This is the file that you’ll be using to launch the game.</p>
+
+<p>Before you do that, you’ll need to make a few changes to the script so you can control how the game runs on your machine.</p>
+
+<p>Open it up in a text editor and make these changes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// must put at the top (or game won't launch)
+export TERM=xterm
+
+// if you have NVIDIA card, add these to the top too
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __VK_LAYER_NV_optimus=NVIDIA_only
+
+// if you have Gamemode
+// find './"Terraria"' and change to 'gamemoderun ./"Terraria"'
+</code></pre></div></div>
+
+<p>You can run the game in Terminal with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sh start.sh
+</code></pre></div></div>
+
+<p>Add this to <code class="language-plaintext highlighter-rouge">~/.bashrc</code> as an alias:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias terraria="cd /path/to/terraria &amp;&amp; sh start.sh"
+</code></pre></div></div>
+
+<p>Reset Terminal so it reloads the config:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
+</code></pre></div></div>
+
+<p>Run it easily from any directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraria
+</code></pre></div></div>
+
+<h2 id="fixing-the-keyboard">Fixing The Keyboard</h2>
+
+<p>There is a problem on Linux machines where your character won’t move properly, he will stutter and act weird on ropes.</p>
+
+<p>The problem has to do w/ how Linux handles repeating keys on the keyboard, but you can disable key repeat on the OS using Terminal.</p>
+
+<p>What makes this problem a little tricky is even if you turn off key repeat once, it will spontaneously turn back on a few minutes later.</p>
+
+<p>So I ended up writing a shell script that disables key repeat every 15 seconds.  When I kill the script, it reverts back to normal settings:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+trap 'xset r rate 500 30; exit' SIGINT
+
+while true; do
+    xset r off
+    sleep 15
+done
+</code></pre></div></div>
+
+<p>You can save this as <code class="language-plaintext highlighter-rouge">nokeyrepeat.sh</code> and run it in Terminal with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sh nokeyrepeat.sh
+</code></pre></div></div>
+
+<p>Add this to <code class="language-plaintext highlighter-rouge">~/.bashrc</code> as an alias:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias nokeyrepeat="sh /path/to/nokeyrepeat.sh"
+</code></pre></div></div>
+
+<p>Reset Terminal so it reloads the config:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
+</code></pre></div></div>
+
+<p>Run it easily from any directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nokeyrepeat
+</code></pre></div></div>
+
+<p>Pressing <code class="language-plaintext highlighter-rouge">CONTROL-C</code> will kill the script.</p>
+
+<h2 id="running-a-dedicated-server">Running A Dedicated Server</h2>
+
+<p>These instructions for running a dedicated server on Linux require some advanced stuff, but if you made it this far you might be up for it.</p>
+
+<p>If, by chance, you have a home server (as I do!) you will need to transfer the game files from your local machine over to the remote machine.</p>
+
+<p>You don’t have to install the game using the installer, especially since your remote server probably doesn’t have a screen or user interface.</p>
+
+<p>I used SCP to transfer the files:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scp -r /path/to/terraria user@serverip:/path/to/terraria
+</code></pre></div></div>
+
+<p>Once the game files are on the server, you connect to that server using SSH:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh user@serverip
+</code></pre></div></div>
+
+<p>Then you create a config file for the Terraria server to use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>world=/path/to/your/world.wld
+autocreate=0
+port=7777
+maxplayers=8
+password=
+motd=Welcome to the server!
+</code></pre></div></div>
+
+<p>You can use a world that you have on your local machine by moving it over to the server.  I’ve done it several times.</p>
+
+<p>To start the Terraria server w/ your config file, you’d do this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/terraria/game
+$ ./TerrariaServer.bin.x86_64 -config /path/to/serverconfig.txt
+</code></pre></div></div>
+
+<p>But as you can see, the server runs in your Terminal session, and you’re not going to leave that Terminal session open forever.  Closing the remote SSH connection would kill your dedicated server.</p>
+
+<p>So, you can use an app called TMUX to run the Terminal session in the background:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install tmux
+</code></pre></div></div>
+
+<p>I wrote this shell script to automatically provision the TMUX session and run the server in the background:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env bash
+
+config="/path/to/serverconfig.txt"
+session="myterrariaserver"
+
+# Kill existing session if it exists
+tmux kill-session -t "$session" 2&gt;/dev/null
+
+# Create a new session
+tmux new-session -d -s "$session"
+
+# Send commands to the session
+tmux send-keys -t "$session" "cd /path/to/terraria/game &amp;&amp; ./TerrariaServer.bin.x86_64 -config $config" C-m
+</code></pre></div></div>
+
+<p>So you could save this script as <code class="language-plaintext highlighter-rouge">runserver.sh</code> and fire the whole thing off:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sh runserver.sh
+</code></pre></div></div>
+
+<p>If you rerun the script it will kill off the currently running server and renew it.</p>
+
+<p>To kill off all currently running sessions:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tmux kill-server
+</code></pre></div></div>
+
+<p>Dedicated servers save the world file every 5 minutes, I think.</p>
+
+<p>I didn’t even discuss firewall settings on your server – that’s a whole different article!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>To the rare person who read this far, congratulations.</p>
+
+<p>I’m trying to put up all my how-to instructions just in case it’s helpful to others – tho I know it’s helpful to me when I revisit these issues.</p>
+
+<p>Enjoy a great game!</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Your character files and world files are stored in <code class="language-plaintext highlighter-rouge">~/.local/share/Terraria</code>.</li>
+  <li>I change my resolution to 1080p prior to loading this game.  It fixes some alt-tab issues on my 4k display.</li>
+</ul>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Terraria">Wikipedia</a></li>
+  <li><a href="https://archive.org/search?query=terraria+linux">Archive.org</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<script src="/assets/js/vanilla.js?v=1727489473"></script>
+
+	</body>
+</html>

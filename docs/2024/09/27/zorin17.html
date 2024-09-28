@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- meta -->
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- social media -->
+	    <meta name="twitter:title" content="'">
+	    <meta name="twitter:description" content="">
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta property="twitter:image" content="">
+	    <meta property="og:image" content="">
+
+	    <!-- title -->
+	    <title>Will Scarlet // Upgrading to Zorin 17</title>
+	    <meta name="description" content="">
+
+	    <!-- icons -->
+	    <link rel="shortcut icon" href="/assets/img/dune2_icon.ico">
+	    <link rel="apple-touch-icon" href="/assets/img/dune2_icon.png">
+
+	    <!-- stylesheets -->
+	    <link href="/assets/css/vanilla/style.css?v=1727489473" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727489473" rel="stylesheet" media="print">
+	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
+	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
+
+	    <!-- rss -->
+	    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+	    <!-- script -->
+	    <script>
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				<header id="top">
+	<a href="/">
+		<div class="avatar"><img src="/assets/img/vanilla/dune2_icon_huge.png"></div>
+		<h1>Will<br> Scarlet</h1>
+	</a>
+</header>
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/games">Games</a></li>
+	</ul>
+</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<div class="post">
+					<date>September 27, 2024</date>
+					<h1>Upgrading to Zorin 17</h1>
+					<p class="excerpt">Gun to my head, time to upgrade.</p>
+					
+						<ul class="tags">
+							
+								<li>
+									<a>linux</a>
+								</li>
+							
+								<li>
+									<a>glibc</a>
+								</li>
+							
+						</ul>
+					
+				</div>
+				<footer id="bottom">
+				</footer>
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<div class="post">
+					
+					
+					<h2 id="intro">Intro</h2>
+
+<p>The thing I love most about Linux is the stability.</p>
+
+<p>Years ago, I had grown to hate Apple for asking me to allow minor updates, only to find out they had done massive app-breaking updates instead.</p>
+
+<p>This was happening weekly until enough was enough.  So, I switched to Linux and have been quite happy ever since.</p>
+
+<p>After a brief run w/ Elementary, I moved to Zorin.  Zorin 16 has been my home for the last 3 years, and it’s been pure bliss.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>Over these same few years, a trend has been unfolding on Github w/ developers offering pre-built apps and games that you don’t have to compile.</p>
+
+<p>This saves me a bunch of trouble, so I’ve been all for it.</p>
+
+<p>But I’ve finally hit a wall.  These pre-built apps no longer work on my machine, as I’ve been getting a dreaded error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./QSS-M-l64: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by ./QSS-M-l64)
+./QSS-M-l64: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by ./QSS-M-l64)
+</code></pre></div></div>
+
+<p>As it turns out, this GLIBC error is translated as “your OS is too old, and you are being left behind.”  An error w/ GLIBC is the kiss of death.</p>
+
+<p>Trying to compile these apps myself resulted in the same errors.  Trying this guy’s <a href="https://www.jertype.com/upgrading-glibc/">tip</a> for compiling an updated GLIBC didn’t work either.</p>
+
+<p>Who knew a 3 year old OS was too old, but aparently that’s how it works in Linux world.  You gotta keep moving w/ the herd.</p>
+
+<p>So I’m prepping for my big update tomorrow to Zorin 17.</p>
+
+<h2 id="migration">Migration</h2>
+
+<p>The reason I even make this post is to have a reason to share my migration shell script.</p>
+
+<p>I presumptively will have to do this major OS upgrade every 2 years, so this is how I’m doing it.  This solves the question of how to temporarily back up my stuff while I install a fresh OS, and then move it back.</p>
+
+<p>Am not doing:</p>
+
+<ul>
+  <li>I’m not using the OS updater, bc I like the idea of a clean slate</li>
+  <li>I’m not using a backup app, bc it backs up my entire home directory (see point #1)</li>
+  <li>I’m not using my home server to store my files, bc internet connections are too slow for the amount of data I need to move</li>
+</ul>
+
+<p>Am doing:</p>
+
+<ul>
+  <li>I’m using a 1TB external drive, which is super fast over USB3</li>
+  <li>I’m using RSYNC bc it’s awesome and can be run repeatedly w/out issues or wasted time</li>
+</ul>
+
+<p>The script:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+BACKUP="/media/myuser/myexternaldrive"
+
+# check if backup directory exists
+if [ ! -d "$BACKUP" ]; then
+    echo "Backup directory $BACKUP not found. Exiting."
+    exit 1
+fi
+
+cd ~
+
+# backup bashrc
+cp ~/.bashrc ${BACKUP}/bashrc.txt
+
+# backup crontab
+crontab -l &gt; ${BACKUP}/crontab.txt
+
+# backup ssh folder
+rsync -avh --delete --progress ~/.ssh/* ${BACKUP}/DOTSSH/
+
+# backup documents files
+rsync -avh --delete --progress ~/Documents/* ${BACKUP}/Documents/
+
+# backup music files
+rsync -avh --delete --progress ~/Music/* ${BACKUP}/Music/
+
+# backup pictures files
+rsync -avh --delete --progress ~/Pictures/* ${BACKUP}/Pictures/
+
+# backup videos files
+rsync -avh --delete --progress ~/Videos/* ${BACKUP}/Videos/
+
+# backup downloads folder
+rsync -avh --delete --progress ~/Downloads/* ${BACKUP}/Downloads/
+
+# backup joplin notes
+rsync -avh --delete --progress ~/.config/joplin-desktop ${BACKUP}/Notes/
+
+# backup wine bottles
+rsync -avh --delete --progress ~/.var/app/com.usebottles.bottles ${BACKUP}/Bottles/
+
+# backup game save files
+mkdir ${BACKUP}/Saves/
+rsync -avh --delete --progress ~/.local/share/Terraria/* ${BACKUP}/Saves/Terraria/
+
+# die early (comment off for database dump)
+exit 1
+
+# backup mysql databases
+USER="myuser"
+PASSWORD="mypass"
+mysql -u$USER -p$PASSWORD -e 'SHOW DATABASES;' | grep -Ev "(Database|information_schema|performance_schema)" | while read dbname; do
+    mysqldump ${dbname} &gt; ${dbname}.sql --add-drop-table --lock-tables=false --user=$USER --password=$PASSWORD
+done
+
+rm -rf ${BACKUP}/Data/
+mkdir ${BACKUP}/Data/
+mv ~/*.sql ${BACKUP}/Data/.
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Wish me luck.  If I never post on here again, well… it means my upgrade failed.</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Don’t use compression on RSYNC bc it slows everything down.</li>
+</ul>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://zorin.com/os/">Zorin</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<script src="/assets/js/vanilla.js?v=1727489473"></script>
+
+	</body>
+</html>

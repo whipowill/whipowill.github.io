@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- meta -->
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- social media -->
+	    <meta name="twitter:title" content="'">
+	    <meta name="twitter:description" content="">
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta property="twitter:image" content="">
+	    <meta property="og:image" content="">
+
+	    <!-- title -->
+	    <title>Will Scarlet // Intro To Running Wine Games</title>
+	    <meta name="description" content="">
+
+	    <!-- icons -->
+	    <link rel="shortcut icon" href="/assets/img/dune2_icon.ico">
+	    <link rel="apple-touch-icon" href="/assets/img/dune2_icon.png">
+
+	    <!-- stylesheets -->
+	    <link href="/assets/css/vanilla/style.css?v=1727489473" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727489473" rel="stylesheet" media="print">
+	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
+	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
+
+	    <!-- rss -->
+	    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+	    <!-- script -->
+	    <script>
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				<header id="top">
+	<a href="/">
+		<div class="avatar"><img src="/assets/img/vanilla/dune2_icon_huge.png"></div>
+		<h1>Will<br> Scarlet</h1>
+	</a>
+</header>
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/games">Games</a></li>
+	</ul>
+</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<div class="post">
+					<date>September 21, 2024</date>
+					<h1>Intro To Running Wine Games</h1>
+					<p class="excerpt">Some pointers about Wine on Linux.</p>
+					
+						<ul class="tags">
+							
+								<li>
+									<a>linux</a>
+								</li>
+							
+								<li>
+									<a>wine</a>
+								</li>
+							
+						</ul>
+					
+				</div>
+				<footer id="bottom">
+				</footer>
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<div class="post">
+					
+					
+					<h2 id="intro">Intro</h2>
+
+<p>This post is intended as a running (and repeatedly updated) post with tips for playing old Windows games on Linux using Wine.</p>
+
+<p>I’m going to make posts specific to particular games, but I need a post with introductory help that I can refer back to.</p>
+
+<h2 id="wine">Wine</h2>
+
+<p>The app you want is <a href="https://usebottles.com/">Bottles</a>. The easiest way to install Bottles is probably on <a href="https://flathub.org/apps/com.usebottles.bottles">Flathub</a>.</p>
+
+<p>Bottles is a UI for <a href="https://www.winehq.org/">Wine</a>, and it’s Wine that actually runs your games.  The hard part about Wine, though, is that it’s command line only.</p>
+
+<p>What’s great about Bottles is it gets you out of the command line and lets you just click buttons to manage your Windows OS.</p>
+
+<p>As someone who is good with Terminal, this is still a much better route to go and I’m happy to recommend this app to others.</p>
+
+<p>Once you figure out the UI of Bottles it’s pretty straightforward and easy to manipulate the OS to accomidate your games.</p>
+
+<p>BONUS: You can make backups of your Bottles.  In my case, I have a son who really likes these games and it makes it easy for me to pass him pre-installed games.</p>
+
+<p>Most of the posts on this blog are going to be instructions about how I got my games to work, and I’ll be using these terms below…</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<p>Terms you need to know about as you setup your Windows OS in Bottles.</p>
+
+<ul>
+  <li>
+    <p>“Arch” - Around 2015, games switched from being 32-bit to 64-bit architecture, and your games have to be installed on a Bottle that has the right architecture. Likely you want <code class="language-plaintext highlighter-rouge">32-bit</code>.</p>
+  </li>
+  <li>
+    <p>“Runner” - The Bottles app lets you choose different engines to run Windows.  I exclusively use the Wine install that I manage myself on my computer, as opposed to the ones Bottles lets you install. For me <code class="language-plaintext highlighter-rouge">sys-wine-9.0</code>.</p>
+  </li>
+  <li>
+    <p>“DXVK” - A compatibility layer that turns Windows DirectX video driver API commands into Vulkan video driver API commands (and makes it run better). For me <code class="language-plaintext highlighter-rouge">dxvk-1.10</code>.</p>
+  </li>
+  <li>
+    <p>“Discrete Graphics” - This has to do with if your machine has a dedicated video card for games, and if so, you definitely want this on.  You want to be using your beefy graphics card to play your games.</p>
+  </li>
+  <li>
+    <p>“Gamescope” - I just recently discovered this and it’s pretty handy.  It forces your game to play in a window size of your choosing.  I set mine to 1920x1080.  Most of my games don’t need it, but some of them it really helps by a) scaling the game to my screen, and b) letting ALT-TAB work w/out freezing the game.</p>
+  </li>
+  <li>
+    <p>“Windows Version” - Sometimes a game will tell you that it won’t run on the version of Windows that you picked.  I usually use Windows XP but sometimes I have to move it up to Windows 8 or something.  Generally this setting rarely matters.</p>
+  </li>
+  <li>
+    <p>“Command Arguments” - This setting in Bottles is where you can pass arguments / parameters to a game when it’s launched.  It would usually be something like <code class="language-plaintext highlighter-rouge">-nointro</code> or similar that the game would recognize.</p>
+  </li>
+  <li>
+    <p>“Feral Gamemode” - This is a settings package for Linux machines that sets it up for maximum gaming performance.  You basically want this on and you’ll just leave it on.</p>
+  </li>
+</ul>
+
+<h2 id="pro-tips--troubleshooting">Pro Tips &amp; Troubleshooting</h2>
+
+<ul>
+  <li>
+    <p>If you are looking for an old game that you don’t actually possess, you can probably find it on <a href="https://archive.org">Archive.org</a>.  Many of these games are now freeware and the companies that created them no longer exist.</p>
+  </li>
+  <li>
+    <p>When using Bottles, some features I turn on or off depending on the game – such as Gamescope. I make a little note reminding me in the game title if that game needs it.</p>
+  </li>
+  <li>
+    <p>In order to install games on Bottles the files have to actually be on the Windows drive.  The Bottle can’t see any files outside of itself, which is a security thing.  That means you might have to mount an ISO file for a game install and manually copy the install files to your Bottle disk.</p>
+  </li>
+  <li>
+    <p>Some of the games have dependencies that they require, like <code class="language-plaintext highlighter-rouge">d3dx9</code> (DirectX9).  Bottles has a section where you can find and install these, but you might have difficulty discovering that you need them at all for your game.  My posts here about games I’ve installed should help with that.</p>
+  </li>
+  <li>
+    <p>Sometimes you can get on the <a href="https://appdb.winehq.org/">Wine</a> or <a href="https://www.protondb.com">Proton</a> sites, type in your game, and find a tip that tells you about some command argument or dependency you need to get your game working.</p>
+  </li>
+  <li>
+    <p>If Bottles won’t run your game or is behaving weird, just turn it off and turn it back on to see if it fixes your problem.  You might also do a <code class="language-plaintext highlighter-rouge">sudo apt update &amp;&amp; sudo apt upgrade</code> and reboot your machine.</p>
+  </li>
+  <li>
+    <p>If Bottles still won’t run your game – and you are freaking out thinking you’ll never get to play your games ever again – you can try a hard update on the app: <code class="language-plaintext highlighter-rouge">flatpak update com.usebottles.bottles</code>.  I had to do this once when Diablo II refused to play.</p>
+  </li>
+  <li>
+    <p>Consider changing your computer resolution to 1080p (1920x1080) before you complain about tiny UIs in your games.</p>
+  </li>
+  <li>
+    <p>If your game (or installer) crashes immediately when you try to run it, you might need to check if it’s a 32-bit/64-bit game and you’re using the wrong architecture.</p>
+  </li>
+</ul>
+
+<h2 id="black-screen">Black Screen</h2>
+
+<p>I’m making this issue a distinct category w/ it’s own header.</p>
+
+<p>If you have a game that is giving you a black screen, but you can hear the music playing, it is probably something easily fixable.</p>
+
+<p>I have had this problem w/ several games and all I had to do is grab the <code class="language-plaintext highlighter-rouge">ddraw.dll</code> from <a href="https://github.com/FunkyFr3sh/cnc-ddraw/releases">CNC-DDraw</a>.  You put that file in your game directory, and then in Bottles settings you go to Override DLLs and input that name: <code class="language-plaintext highlighter-rouge">ddraw.dll</code>.</p>
+
+<p>Then blamo, your game will work.</p>
+
+<p>DDraw is a video library that Windows uses, and FunkyFr3sh re-programmed it to make super old games work w/ modern computers.  By putting that file in your game directory you override the default Windows one.</p>
+
+<h2 id="how-to-install-wine">How To Install Wine</h2>
+
+<p>If you’re like me, and you want Bottles to use the version of Wine you have on your machine, you will need this.</p>
+
+<p>Because some Linux systems come with old versions of Wine, here are some Terminal commands to get the latest:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// remove existing
+$ sudo apt-get remove --purge wine* --autoremove
+
+// tap repository
+$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
+$ sudo gpg -o /etc/apt/trusted.gpg.d/winehq.key.gpg --dearmor winehq.key
+$ sudo apt-add-repository "deb http://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs) main"
+
+// update and install
+$ sudo apt update
+$ sudo apt install --install-recommends winehq-stable
+$ sudo apt install winetricks
+
+// check your version
+$ wine --version
+
+// how to switch from stable to development
+$ sudo apt remove winehq-stable
+$ sudo apt install winehq-devel
+</code></pre></div></div>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://usebottles.com/">Bottles</a></li>
+  <li><a href="https://www.winehq.org/">Wine</a></li>
+  <li><a href="https://appdb.winehq.org/">Wine AppDB</a></li>
+  <li><a href="https://www.protondb.com">ProtonDB</a></li>
+  <li><a href="https://github.com/FunkyFr3sh/cnc-ddraw/releases">CNC-DDraw</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<script src="/assets/js/vanilla.js?v=1727489473"></script>
+
+	</body>
+</html>

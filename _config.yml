@@ -1,0 +1,28 @@
+gems: [jekyll-paginate]
+
+baseurl: "/"
+destination: docs
+
+sass:
+  syntax: :scss
+
+permalink: /:year/:month/:day/:title:output_ext
+
+title: Will Scarlet
+description: I'm a software engineer who enjoys tinkering w/ old games as a hobby.
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+feed:
+  posts_limit: 10
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
