@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T20:50:57-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T20:58:28-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -140,19 +140,17 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <p>The modern open source engine Dune Dynasty, developed originally by <a href="https://dunedynasty.sourceforge.net/">David Wang</a>, has become the game standard.  The project is now being spearheaded by mystery coder <a href="https://github.com/gameflorist/dunedynasty">CodeFlorist</a>.</p>
 
-<p>Built to run on modern machines, Dune Dynasty adds widescreen resolutions, multi-unit select, waypoints, build queues, skrimish mode – and TCP/IP multiplayer.</p>
+<p>Built to run on modern machines, Dune Dynasty adds widescreen resolutions, multi-unit select, waypoints, build queues, skirmish mode – and TCP/IP multiplayer.</p>
 
-<p>This is a game that I still play to this day, with the occassional online skirmish against my eldest son.</p>
+<p>This is a game that I still play to this day, with the occassional LAN game w/ my eldest son.</p>
 
 <h2 id="install">Install</h2>
 
-<p>Head over to grab the install files for <a href="https://github.com/gameflorist/dunedynasty/releases/">DuneDynasty</a>.  You can put these in a game directory for Linux native games, I use <code class="language-plaintext highlighter-rouge">~/Games/Linux/</code>.</p>
+<p>Head over to grab the pre-built files for <a href="https://github.com/gameflorist/dunedynasty/releases/">DuneDynasty</a>.  You can put these in a game directory for Linux native games, I use <code class="language-plaintext highlighter-rouge">~/Games/Linux/</code>.</p>
 
 <p>Find the original game files for Dune 2 (I think you want the USA version?) and place them in the <code class="language-plaintext highlighter-rouge">data/</code> directory of DuneDynasty.  These game files you are pasting in are the pak files and such from the original game install disk.</p>
 
-<p>In many of the folders of DuneDynasty you’ll see various <code class="language-plaintext highlighter-rouge">FILELIST.TXT</code> files that tell you what you could put in that folder, if you had those files.</p>
-
-<p>All you absolutely have to have are the OG game files, but you can optionally add dozens of music packs and custom campaigns that have been popular in the Dune2 community over the many decades.</p>
+<p>In many of the folders of DuneDynasty you’ll see various <code class="language-plaintext highlighter-rouge">FILELIST.TXT</code> files that tell you what you could put in that folder, if you had those files.  These are optional enhancements beyond the original game, like music packs and custom campaigns.</p>
 
 <p>Before you can actually play this Linux build, you’ll need to install some system dependencies:</p>
 
@@ -172,7 +170,7 @@ $ sudo apt install liballegro*5.2 liballegro*5-dev fluidsynth libfluidsynth-dev 
 
 <p>Add this to <code class="language-plaintext highlighter-rouge">~/.bashrc</code> as an alias:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias dune2="cd ~/Games/Linux/Dune2\ v1.6.3 &amp;&amp; ./dunedynasty"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias dune2="cd ~/Games/Linux/Dune2 &amp;&amp; ./dunedynasty"
 </code></pre></div></div>
 
 <p>Reset Terminal so it reloads the config:</p>
