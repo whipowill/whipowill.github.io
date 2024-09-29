@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-27T20:11:13-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T20:50:57-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -72,25 +72,25 @@ crontab -l &gt; ${BACKUP}/crontab.txt
 # backup ssh folder
 rsync -avh --delete --progress ~/.ssh/* ${BACKUP}/DOTSSH/
 
-# backup documents files
+# backup documents
 rsync -avh --delete --progress ~/Documents/* ${BACKUP}/Documents/
 
-# backup music files
+# backup music
 rsync -avh --delete --progress ~/Music/* ${BACKUP}/Music/
 
-# backup pictures files
+# backup pictures
 rsync -avh --delete --progress ~/Pictures/* ${BACKUP}/Pictures/
 
-# backup videos files
+# backup videos
 rsync -avh --delete --progress ~/Videos/* ${BACKUP}/Videos/
 
-# backup downloads folder
+# backup downloads
 rsync -avh --delete --progress ~/Downloads/* ${BACKUP}/Downloads/
 
-# backup joplin notes
+# backup joplin
 rsync -avh --delete --progress ~/.config/joplin-desktop ${BACKUP}/Notes/
 
-# backup wine bottles
+# backup wine
 rsync -avh --delete --progress ~/.var/app/com.usebottles.bottles ${BACKUP}/Bottles/
 
 # backup game save files
@@ -116,6 +116,8 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <p>Wish me luck.  If I never post on here again, well… it means my upgrade failed.</p>
 
+<p>UPDATE: It went really well.  Only thing I forgot to backup was my Sublime Text settings file.</p>
+
 <h2 id="notes">Notes</h2>
 
 <ul>
@@ -126,7 +128,83 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <ul>
   <li><a href="https://zorin.com/os/">Zorin</a></li>
-</ul>]]></content><author><name></name></author><category term="blog" /><category term="linux" /><category term="glibc" /><summary type="html"><![CDATA[Gun to my head, time to upgrade.]]></summary></entry><entry><title type="html">Terraria (2011)</title><link href="http://localhost:4000/2024/09/25/terraria.html" rel="alternate" type="text/html" title="Terraria (2011)" /><published>2024-09-25T00:00:00-06:00</published><updated>2024-09-25T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/25/terraria</id><content type="html" xml:base="http://localhost:4000/2024/09/25/terraria.html"><![CDATA[<p class="caption">Screenshot from when I used to play this on Mac, a long, long, time ago.</p>
+</ul>]]></content><author><name></name></author><category term="blog" /><category term="linux" /><category term="glibc" /><summary type="html"><![CDATA[Gun to my head, time to upgrade.]]></summary></entry><entry><title type="html">Dune II (1992)</title><link href="http://localhost:4000/2024/09/26/dune2.html" rel="alternate" type="text/html" title="Dune II (1992)" /><published>2024-09-26T00:00:00-06:00</published><updated>2024-09-26T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/26/dune2</id><content type="html" xml:base="http://localhost:4000/2024/09/26/dune2.html"><![CDATA[<h2 id="intro">Intro</h2>
+
+<p>This was the game that started it all for me, the <a href="https://www.youtube.com/watch?v=HOemQuy2JUc">grandfather of real time strategy</a>.</p>
+
+<p>I can remember watching my big brother play this the early 90s, and I thought it was the coolest thing I had ever seen.</p>
+
+<p>I had to play this game.</p>
+
+<p>Clocking in at over 30 years old, Dune 2 has never been more playable – and more fun – than it is right now.</p>
+
+<p>The modern open source engine Dune Dynasty, developed originally by <a href="https://dunedynasty.sourceforge.net/">David Wang</a>, has become the game standard.  The project is now being spearheaded by mystery coder <a href="https://github.com/gameflorist/dunedynasty">CodeFlorist</a>.</p>
+
+<p>Built to run on modern machines, Dune Dynasty adds widescreen resolutions, multi-unit select, waypoints, build queues, skrimish mode – and TCP/IP multiplayer.</p>
+
+<p>This is a game that I still play to this day, with the occassional online skirmish against my eldest son.</p>
+
+<h2 id="install">Install</h2>
+
+<p>Head over to grab the install files for <a href="https://github.com/gameflorist/dunedynasty/releases/">DuneDynasty</a>.  You can put these in a game directory for Linux native games, I use <code class="language-plaintext highlighter-rouge">~/Games/Linux/</code>.</p>
+
+<p>Find the original game files for Dune 2 (I think you want the USA version?) and place them in the <code class="language-plaintext highlighter-rouge">data/</code> directory of DuneDynasty.  These game files you are pasting in are the pak files and such from the original game install disk.</p>
+
+<p>In many of the folders of DuneDynasty you’ll see various <code class="language-plaintext highlighter-rouge">FILELIST.TXT</code> files that tell you what you could put in that folder, if you had those files.</p>
+
+<p>All you absolutely have to have are the OG game files, but you can optionally add dozens of music packs and custom campaigns that have been popular in the Dune2 community over the many decades.</p>
+
+<p>Before you can actually play this Linux build, you’ll need to install some system dependencies:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:allegro/5.2
+$ sudo apt install liballegro*5.2 liballegro*5-dev fluidsynth libfluidsynth-dev libinstpatch-dev libenet-dev
+
+// allegro = music
+// fluidsynth = music
+// libinstpatch = music
+// libenet = networking
+</code></pre></div></div>
+
+<p>You could run the game now with this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Games/Linux/Dune2 &amp;&amp; ./dunedynasty
+</code></pre></div></div>
+
+<p>Add this to <code class="language-plaintext highlighter-rouge">~/.bashrc</code> as an alias:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias dune2="cd ~/Games/Linux/Dune2\ v1.6.3 &amp;&amp; ./dunedynasty"
+</code></pre></div></div>
+
+<p>Reset Terminal so it reloads the config:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
+</code></pre></div></div>
+
+<p>Run it easily from any directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dune2
+</code></pre></div></div>
+
+<h2 id="settings">Settings</h2>
+
+<p>In the main menu, go to Options &amp; Extras, find Gameplay, and turn on everything except Brutal AI and Insatiable Sandworms.</p>
+
+<p>When you get into an actual game, there are more Game Control settings you can adjust.</p>
+
+<p>Note that these settings get saved to a file in <code class="language-plaintext highlighter-rouge">~/.config/dunedynasty/dunedynasty.cfg</code>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Enjoy this classic game!  If you want to play a match, hit me up.</p>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Dune_II">Wikipedia</a></li>
+  <li><a href="https://archive.org/search?query=dune+2+dynasty">Archive.org</a></li>
+  <li><a href="https://dunedynasty.sourceforge.net/">David Wang</a></li>
+  <li><a href="https://github.com/gameflorist/dunedynasty">GameFlorist</a></li>
+</ul>]]></content><author><name></name></author><category term="games" /><category term="linux" /><category term="strategy" /><category term="multiplayer" /><summary type="html"><![CDATA[The grandfather of real time strategy.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/vanilla/screenshots/dune2.png" /><media:content medium="image" url="http://localhost:4000/assets/img/vanilla/screenshots/dune2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terraria (2011)</title><link href="http://localhost:4000/2024/09/25/terraria.html" rel="alternate" type="text/html" title="Terraria (2011)" /><published>2024-09-25T00:00:00-06:00</published><updated>2024-09-25T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/25/terraria</id><content type="html" xml:base="http://localhost:4000/2024/09/25/terraria.html"><![CDATA[<p class="caption">Screenshot from when I used to play this on Mac, a long, long, time ago.</p>
 
 <p class="caption">WARNING!  These install instructions require a high degree of nerdery, involving Terminal commands, shell scripts, TMUX sessions, and more.</p>
 

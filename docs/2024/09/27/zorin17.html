@@ -21,12 +21,12 @@
 	    <meta name="description" content="">
 
 	    <!-- icons -->
-	    <link rel="shortcut icon" href="/assets/img/dune2_icon.ico">
-	    <link rel="apple-touch-icon" href="/assets/img/dune2_icon.png">
+	    <link rel="shortcut icon" href="/assets/img/vanilla/dune2_icon.ico">
+	    <link rel="apple-touch-icon" href="/assets/img/vanilla/dune2_icon.png">
 
 	    <!-- stylesheets -->
-	    <link href="/assets/css/vanilla/style.css?v=1727489473" rel="stylesheet">
-	    <link href="/assets/css/vanilla/print.css?v=1727489473" rel="stylesheet" media="print">
+	    <link href="/assets/css/vanilla/style.css?v=1727578257" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727578257" rel="stylesheet" media="print">
 	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
 	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
 
@@ -171,25 +171,25 @@ crontab -l &gt; ${BACKUP}/crontab.txt
 # backup ssh folder
 rsync -avh --delete --progress ~/.ssh/* ${BACKUP}/DOTSSH/
 
-# backup documents files
+# backup documents
 rsync -avh --delete --progress ~/Documents/* ${BACKUP}/Documents/
 
-# backup music files
+# backup music
 rsync -avh --delete --progress ~/Music/* ${BACKUP}/Music/
 
-# backup pictures files
+# backup pictures
 rsync -avh --delete --progress ~/Pictures/* ${BACKUP}/Pictures/
 
-# backup videos files
+# backup videos
 rsync -avh --delete --progress ~/Videos/* ${BACKUP}/Videos/
 
-# backup downloads folder
+# backup downloads
 rsync -avh --delete --progress ~/Downloads/* ${BACKUP}/Downloads/
 
-# backup joplin notes
+# backup joplin
 rsync -avh --delete --progress ~/.config/joplin-desktop ${BACKUP}/Notes/
 
-# backup wine bottles
+# backup wine
 rsync -avh --delete --progress ~/.var/app/com.usebottles.bottles ${BACKUP}/Bottles/
 
 # backup game save files
@@ -215,6 +215,8 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <p>Wish me luck.  If I never post on here again, well… it means my upgrade failed.</p>
 
+<p>UPDATE: It went really well.  Only thing I forgot to backup was my Sublime Text settings file.</p>
+
 <h2 id="notes">Notes</h2>
 
 <ul>
@@ -232,7 +234,7 @@ mv ~/*.sql ${BACKUP}/Data/.
 		</div>
 	</div>
 </div>
-		<script src="/assets/js/vanilla.js?v=1727489473"></script>
+		<script src="/assets/js/vanilla.js?v=1727578257"></script>
 
 	</body>
 </html>
