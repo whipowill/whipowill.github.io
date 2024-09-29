@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T20:58:28-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T21:00:03-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -90,12 +90,8 @@ rsync -avh --delete --progress ~/Downloads/* ${BACKUP}/Downloads/
 # backup joplin
 rsync -avh --delete --progress ~/.config/joplin-desktop ${BACKUP}/Notes/
 
-# backup wine
+# backup bottles
 rsync -avh --delete --progress ~/.var/app/com.usebottles.bottles ${BACKUP}/Bottles/
-
-# backup game save files
-mkdir ${BACKUP}/Saves/
-rsync -avh --delete --progress ~/.local/share/Terraria/* ${BACKUP}/Saves/Terraria/
 
 # die early (comment off for database dump)
 exit 1
@@ -116,7 +112,7 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <p>Wish me luck.  If I never post on here again, well… it means my upgrade failed.</p>
 
-<p>UPDATE: It went really well.  Only thing I forgot to backup was my Sublime Text settings file.</p>
+<p>UPDATE: It went really well.  Only thing I forgot to backup was my Sublime Text settings file.  The coolest thing about this was backing up the entire Bottles directory worked.</p>
 
 <h2 id="notes">Notes</h2>
 
