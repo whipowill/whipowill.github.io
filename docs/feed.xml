@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T19:04:00-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T19:12:03-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -232,9 +232,9 @@ $ sh installer.sh
 
 <p>Here some knowledge I had to learn – your 64-bit operating system w/ it’s 64-bit video drivers won’t work on a 32-bit game.</p>
 
-<p>Terraria is a 32-bit game, and if you try to run it, it won’t work bc you don’t have OpenGL drivers.  You might be confused like me, and spend hours trying to figure out why the game is crashing due to lack of OpenGL 2.1 support when you have a system w/ OpenGL 4.4 on it.</p>
+<p>Terraria is a 32-bit game, and if you try to run it, it won’t work bc you don’t have OpenGL drivers.  You might be confused like me, and spend hours trying to figure out why the game is crashing due to lack of OpenGL 2.1 support when you have a system w/ OpenGL 4.4 on it.  It’s bc you have 64-bit libraries only.</p>
 
-<p>So what you do it just install the 32-bit OpenGL drivers and problem solved:</p>
+<p>So what you do is just install the 32-bit OpenGL libraries and problem solved:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install libgl1:i386 libglu1-mesa:i386
 </code></pre></div></div>
@@ -415,6 +415,7 @@ tmux send-keys -t "$session" "cd /path/to/terraria/game &amp;&amp; ./TerrariaSer
 <ul>
   <li>Your character files and world files are stored in <code class="language-plaintext highlighter-rouge">~/.local/share/Terraria</code>.</li>
   <li>I change my resolution to 1080p prior to loading this game.  It fixes some alt-tab issues on my 4k display.</li>
+  <li>I never have been able to get this game to work in Bottles, but Linux native version is best anyway.</li>
 </ul>
 
 <h2 id="external-links">External Links</h2>

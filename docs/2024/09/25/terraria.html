@@ -25,8 +25,8 @@
 	    <link rel="apple-touch-icon" href="/assets/img/vanilla/dune2_icon.png">
 
 	    <!-- stylesheets -->
-	    <link href="/assets/css/vanilla/style.css?v=1727658240" rel="stylesheet">
-	    <link href="/assets/css/vanilla/print.css?v=1727658240" rel="stylesheet" media="print">
+	    <link href="/assets/css/vanilla/style.css?v=1727658723" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727658723" rel="stylesheet" media="print">
 	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
 	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
 
@@ -140,9 +140,9 @@ $ sh installer.sh
 
 <p>Here some knowledge I had to learn – your 64-bit operating system w/ it’s 64-bit video drivers won’t work on a 32-bit game.</p>
 
-<p>Terraria is a 32-bit game, and if you try to run it, it won’t work bc you don’t have OpenGL drivers.  You might be confused like me, and spend hours trying to figure out why the game is crashing due to lack of OpenGL 2.1 support when you have a system w/ OpenGL 4.4 on it.</p>
+<p>Terraria is a 32-bit game, and if you try to run it, it won’t work bc you don’t have OpenGL drivers.  You might be confused like me, and spend hours trying to figure out why the game is crashing due to lack of OpenGL 2.1 support when you have a system w/ OpenGL 4.4 on it.  It’s bc you have 64-bit libraries only.</p>
 
-<p>So what you do it just install the 32-bit OpenGL drivers and problem solved:</p>
+<p>So what you do is just install the 32-bit OpenGL libraries and problem solved:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install libgl1:i386 libglu1-mesa:i386
 </code></pre></div></div>
@@ -323,6 +323,7 @@ tmux send-keys -t "$session" "cd /path/to/terraria/game &amp;&amp; ./TerrariaSer
 <ul>
   <li>Your character files and world files are stored in <code class="language-plaintext highlighter-rouge">~/.local/share/Terraria</code>.</li>
   <li>I change my resolution to 1080p prior to loading this game.  It fixes some alt-tab issues on my 4k display.</li>
+  <li>I never have been able to get this game to work in Bottles, but Linux native version is best anyway.</li>
 </ul>
 
 <h2 id="external-links">External Links</h2>
@@ -337,7 +338,7 @@ tmux send-keys -t "$session" "cd /path/to/terraria/game &amp;&amp; ./TerrariaSer
 		</div>
 	</div>
 </div>
-		<script src="/assets/js/vanilla.js?v=1727658240"></script>
+		<script src="/assets/js/vanilla.js?v=1727658723"></script>
 
 	</body>
 </html>
