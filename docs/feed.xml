@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T19:12:03-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T20:36:28-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -151,12 +151,7 @@ mv ~/*.sql ${BACKUP}/Data/.
 <p>Before you can actually play this Linux build, you’ll need to install some system dependencies:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:allegro/5.2
-$ sudo apt install liballegro*5.2 liballegro*5-dev fluidsynth libfluidsynth-dev libinstpatch-dev libenet-dev
-
-// allegro = music
-// fluidsynth = music
-// libinstpatch = music
-// libenet = networking
+$ sudo apt install liballegro5.2 liballegro-acodec5.2 liballegro-image5.2 libenet7 libfluidsynth3 libmad0 libgl1
 </code></pre></div></div>
 
 <p>You could run the game now with this:</p>
