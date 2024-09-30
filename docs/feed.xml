@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-28T21:00:03-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T19:04:00-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -138,7 +138,7 @@ mv ~/*.sql ${BACKUP}/Data/.
 
 <p>Built to run on modern machines, Dune Dynasty adds widescreen resolutions, multi-unit select, waypoints, build queues, skirmish mode – and TCP/IP multiplayer.</p>
 
-<p>This is a game that I still play to this day, with the occassional LAN game w/ my eldest son.</p>
+<p>This is a game that I still play to this day, w/ the occassional LAN game w/ my eldest son.</p>
 
 <h2 id="install">Install</h2>
 
@@ -227,6 +227,22 @@ $ sh installer.sh
 </code></pre></div></div>
 
 <p>Once you run this, a visual installer UI will open up and guide you thru the process.</p>
+
+<h2 id="32-bit-opengl-libraries">32-bit OpenGL Libraries</h2>
+
+<p>Here some knowledge I had to learn – your 64-bit operating system w/ it’s 64-bit video drivers won’t work on a 32-bit game.</p>
+
+<p>Terraria is a 32-bit game, and if you try to run it, it won’t work bc you don’t have OpenGL drivers.  You might be confused like me, and spend hours trying to figure out why the game is crashing due to lack of OpenGL 2.1 support when you have a system w/ OpenGL 4.4 on it.</p>
+
+<p>So what you do it just install the 32-bit OpenGL drivers and problem solved:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install libgl1:i386 libglu1-mesa:i386
+</code></pre></div></div>
+
+<p>I’m going to put this error in here so the poor sap searching Google can find it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Microsoft.Xna.Framework.Graphics.NoSuitableGraphicsDeviceException: OpenGL 2.1 support is required!
+</code></pre></div></div>
 
 <h2 id="amending-the-start-script">Amending The Start Script</h2>
 
