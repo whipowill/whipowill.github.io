@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	    <!-- meta -->
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- social media -->
+	    <meta name="twitter:title" content="'">
+	    <meta name="twitter:description" content="">
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta property="twitter:image" content="">
+	    <meta property="og:image" content="">
+
+	    <!-- title -->
+	    <title>Will Scarlet // Wolfenstein (1992)</title>
+	    <meta name="description" content="">
+
+	    <!-- icons -->
+	    <link rel="shortcut icon" href="/assets/img/vanilla/dune2_icon.ico">
+	    <link rel="apple-touch-icon" href="/assets/img/vanilla/dune2_icon.png">
+
+	    <!-- stylesheets -->
+	    <link href="/assets/css/vanilla/style.css?v=1727970696" rel="stylesheet">
+	    <link href="/assets/css/vanilla/print.css?v=1727970696" rel="stylesheet" media="print">
+	    <link href="/assets/misc/ss-standard/webfonts/ss-standard.css" rel="stylesheet">
+	    <link href="/assets/misc/ss-social-circle/webfonts/ss-social-circle.css" rel="stylesheet">
+
+	    <!-- rss -->
+	    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+	    <!-- script -->
+	    <script>
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="top left">
+				<header id="top">
+	<a href="/">
+		<div class="avatar"><img src="/assets/img/vanilla/dune2_icon_huge.png"></div>
+		<h1>Will<br> Scarlet</h1>
+	</a>
+</header>
+			</div>
+		</div>
+		<div class="column">
+			<div class="top right">
+				<nav>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/games">Games</a></li>
+		<li><a href="https://www.duckduckgo.com/?sites=whipowill.github.io&q=hello" target="_blank">Search</a></li>
+
+	</ul>
+</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cross"></div>
+<div class="container is-max-desktop">
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="bottom left">
+				<div class="post">
+					<date>October 02, 2024</date>
+					<h1>Wolfenstein (1992)</h1>
+					<p class="excerpt">The grandfather of first person shooters.</p>
+					
+						<ul class="tags">
+							
+								<li>
+									<a>linux</a>
+								</li>
+							
+								<li>
+									<a>shooter</a>
+								</li>
+							
+								<li>
+									<a>multiplayer</a>
+								</li>
+							
+						</ul>
+					
+				</div>
+				<footer id="bottom">
+				</footer>
+			</div>
+		</div>
+		<div class="column">
+			<div class="bottom right">
+				<div class="post">
+					
+						<a href="/assets/img/vanilla/screenshots/wolfenstein.jpg" target="_blank"><img class="heroimage" src="/assets/img/vanilla/screenshots/wolfenstein.jpg" alt="Wolfenstein (1992)"></a>
+						<div class="space"></div>
+					
+					
+						
+					
+					<p>I don’t know if the kids these days will even know what this game is.</p>
+
+<p>This was the beginning of Id Software and the so-called “boomer shooter” genre of arena games.  This was a stepping stone for John Carmack that led to DOOM, DOOM2, and Quake.</p>
+
+<p>It was a landmark game.  But the question is, is the game worth going back to?  No, it’s not.</p>
+
+<p>Instead, I present to you <a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a>, a DOOM2 mod by Zio McCall from Italy.  This mod packs all the original levels, plus several episodes more, culminating in the ultimate Wolfenstein 3D experience.</p>
+
+<p>Take a step back in time to WW2 and play the role of Capt. B.J. Blazkowicz as you escape imprisonment in the Castle Wolfenstein!</p>
+
+<h2 id="install">Install</h2>
+
+<p>Roll over to <a href="https://github.com/ZDoom/gzdoom/releases">GZDOOM</a> and install the latest release for Linux.  You’re looking for a DEB file, there is no reliable package manager version.</p>
+
+<p>(Don’t waste your time w/ the Flathub version of GZDOOM bc it won’t allow you to do the handy command line tricks you’ll need to effectively play the game w/ mods.)</p>
+
+<p>You’ll need to find the original Id Software WAD files.  These are the “base game” files on which all GZDOOM mods are built.  You can’t play w/out the original game files.</p>
+
+<p>In this case you need <code class="language-plaintext highlighter-rouge">DOOM2.WAD</code>, as Brutal Wolfenstein is a mod of DOOM2.  You will also, obviously, need the files for <a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a>.</p>
+
+<p>So, now where do you put these things?</p>
+
+<p>Make a directory you can use to store all your GZDOOM wad and mod files, I use <code class="language-plaintext highlighter-rouge">~/Games/Linux/DOOM/</code>, and then prepare to put these files into a particular structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>launcher.sh
+IWAD/
+    DOOM2.WAD
+PWAD/
+    DOOM2/
+        Brutal Wolfenstein v7.wad
+</code></pre></div></div>
+
+<p>What is this <code class="language-plaintext highlighter-rouge">launcher.sh</code> file?</p>
+
+<p>It’s a shell script <a href="https://github.com/whipowill/sh-doom-launcher">DOOM Launcher</a> that manages all the complicated command line arguments to run your various GZDOOM mods.</p>
+
+<p>Unlike Windows (which has <a href="https://forum.zdoom.org/viewtopic.php?t=76814">ZDL</a>), Linux doesn’t have a fancy UI mod loader, so this shell script is my version of one.</p>
+
+<p>So w/ all these items in place, you are ready to go, my friend.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/doom/
+$ sh launcher.sh
+</code></pre></div></div>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>The difficulty settings on this game are harder than regular DOOM, so don’t jump into Ultraviolence and think you’re going to dominate.</li>
+  <li>Getting all the treasure in a map gives you a bonus, like more ammo or a new weapon you didn’t have before.</li>
+</ul>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Wolfenstein_3D">Wikipedia</a></li>
+  <li><a href="https://archive.org/search?query=wolfenstein">Archive.org</a></li>
+  <li><a href="https://github.com/ZDoom/gzdoom/releases">GZDOOM</a></li>
+  <li><a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a></li>
+</ul>
+
+<p>My relevent repos:</p>
+
+<ul>
+  <li><a href="https://github.com/whipowill/doom-dir">Will Scarlet’s DOOM Directory</a> - links to my favorite mods</li>
+  <li><a href="https://github.com/whipowill/sh-doom-launcher">Will Scarlet’s DOOM Launcher</a> - shell script mod manger</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<script src="/assets/js/vanilla.js?v=1727970696"></script>
+
+	</body>
+</html>

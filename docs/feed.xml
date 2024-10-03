@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-29T20:36:28-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-03T09:51:36-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Will Scarlet</title><subtitle>I&apos;m a software engineer who enjoys tinkering w/ old games as a hobby.</subtitle><entry><title type="html">Wolfenstein (1992)</title><link href="http://localhost:4000/2024/10/02/wolfenstein.html" rel="alternate" type="text/html" title="Wolfenstein (1992)" /><published>2024-10-02T00:00:00-06:00</published><updated>2024-10-02T00:00:00-06:00</updated><id>http://localhost:4000/2024/10/02/wolfenstein</id><content type="html" xml:base="http://localhost:4000/2024/10/02/wolfenstein.html"><![CDATA[<p>I don’t know if the kids these days will even know what this game is.</p>
+
+<p>This was the beginning of Id Software and the so-called “boomer shooter” genre of arena games.  This was a stepping stone for John Carmack that led to DOOM, DOOM2, and Quake.</p>
+
+<p>It was a landmark game.  But the question is, is the game worth going back to?  No, it’s not.</p>
+
+<p>Instead, I present to you <a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a>, a DOOM2 mod by Zio McCall from Italy.  This mod packs all the original levels, plus several episodes more, culminating in the ultimate Wolfenstein 3D experience.</p>
+
+<p>Take a step back in time to WW2 and play the role of Capt. B.J. Blazkowicz as you escape imprisonment in the Castle Wolfenstein!</p>
+
+<h2 id="install">Install</h2>
+
+<p>Roll over to <a href="https://github.com/ZDoom/gzdoom/releases">GZDOOM</a> and install the latest release for Linux.  You’re looking for a DEB file, there is no reliable package manager version.</p>
+
+<p>(Don’t waste your time w/ the Flathub version of GZDOOM bc it won’t allow you to do the handy command line tricks you’ll need to effectively play the game w/ mods.)</p>
+
+<p>You’ll need to find the original Id Software WAD files.  These are the “base game” files on which all GZDOOM mods are built.  You can’t play w/out the original game files.</p>
+
+<p>In this case you need <code class="language-plaintext highlighter-rouge">DOOM2.WAD</code>, as Brutal Wolfenstein is a mod of DOOM2.  You will also, obviously, need the files for <a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a>.</p>
+
+<p>So, now where do you put these things?</p>
+
+<p>Make a directory you can use to store all your GZDOOM wad and mod files, I use <code class="language-plaintext highlighter-rouge">~/Games/Linux/DOOM/</code>, and then prepare to put these files into a particular structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>launcher.sh
+IWAD/
+    DOOM2.WAD
+PWAD/
+    DOOM2/
+        Brutal Wolfenstein v7.wad
+</code></pre></div></div>
+
+<p>What is this <code class="language-plaintext highlighter-rouge">launcher.sh</code> file?</p>
+
+<p>It’s a shell script <a href="https://github.com/whipowill/sh-doom-launcher">DOOM Launcher</a> that manages all the complicated command line arguments to run your various GZDOOM mods.</p>
+
+<p>Unlike Windows (which has <a href="https://forum.zdoom.org/viewtopic.php?t=76814">ZDL</a>), Linux doesn’t have a fancy UI mod loader, so this shell script is my version of one.</p>
+
+<p>So w/ all these items in place, you are ready to go, my friend.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/doom/
+$ sh launcher.sh
+</code></pre></div></div>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>The difficulty settings on this game are harder than regular DOOM, so don’t jump into Ultraviolence and think you’re going to dominate.</li>
+  <li>Getting all the treasure in a map gives you a bonus, like more ammo or a new weapon you didn’t have before.</li>
+</ul>
+
+<h2 id="external-links">External Links</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Wolfenstein_3D">Wikipedia</a></li>
+  <li><a href="https://archive.org/search?query=wolfenstein">Archive.org</a></li>
+  <li><a href="https://github.com/ZDoom/gzdoom/releases">GZDOOM</a></li>
+  <li><a href="https://www.moddb.com/mods/brutal-wolfenstein-3d/downloads">Brutal Wolfenstein</a></li>
+</ul>
+
+<p>My relevent repos:</p>
+
+<ul>
+  <li><a href="https://github.com/whipowill/doom-dir">Will Scarlet’s DOOM Directory</a> - links to my favorite mods</li>
+  <li><a href="https://github.com/whipowill/sh-doom-launcher">Will Scarlet’s DOOM Launcher</a> - shell script mod manger</li>
+</ul>]]></content><author><name></name></author><category term="games" /><category term="linux" /><category term="shooter" /><category term="multiplayer" /><summary type="html"><![CDATA[The grandfather of first person shooters.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/vanilla/screenshots/wolfenstein.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/vanilla/screenshots/wolfenstein.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Upgrading to Zorin 17</title><link href="http://localhost:4000/2024/09/27/zorin17.html" rel="alternate" type="text/html" title="Upgrading to Zorin 17" /><published>2024-09-27T00:00:00-06:00</published><updated>2024-09-27T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/27/zorin17</id><content type="html" xml:base="http://localhost:4000/2024/09/27/zorin17.html"><![CDATA[<h2 id="intro">Intro</h2>
 
 <p>The thing I love most about Linux is the stability.</p>
 
@@ -567,7 +632,7 @@ Overrides - ddraw.dll
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Pharaoh_(video_game)">Wikipedia</a></li>
   <li><a href="https://archive.org/search?query=pharaoh+cleopatra">Archive.org</a></li>
-</ul>]]></content><author><name></name></author><category term="games" /><category term="wine" /><category term="strategy" /><category term="citybuilder" /><summary type="html"><![CDATA[The city builder from Ancient Egypt.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/vanilla/screenshots/pharaoh.png" /><media:content medium="image" url="http://localhost:4000/assets/img/vanilla/screenshots/pharaoh.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using Terminal To Change Screen Resolutions</title><link href="http://localhost:4000/2024/09/23/screen_resolutions.html" rel="alternate" type="text/html" title="Using Terminal To Change Screen Resolutions" /><published>2024-09-23T00:00:00-06:00</published><updated>2024-09-23T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/23/screen_resolutions</id><content type="html" xml:base="http://localhost:4000/2024/09/23/screen_resolutions.html"><![CDATA[<p>This is for the nerds, but in Terminal I have added some aliases to my <code class="language-plaintext highlighter-rouge">~/.bashrc</code> file to make it easier to change screen resolutions:</p>
+</ul>]]></content><author><name></name></author><category term="games" /><category term="wine" /><category term="strategy" /><category term="citybuilder" /><summary type="html"><![CDATA[The city builder from Ancient Egypt.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/vanilla/screenshots/pharaoh.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/vanilla/screenshots/pharaoh.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using Terminal To Change Screen Resolutions</title><link href="http://localhost:4000/2024/09/23/screen_resolutions.html" rel="alternate" type="text/html" title="Using Terminal To Change Screen Resolutions" /><published>2024-09-23T00:00:00-06:00</published><updated>2024-09-23T00:00:00-06:00</updated><id>http://localhost:4000/2024/09/23/screen_resolutions</id><content type="html" xml:base="http://localhost:4000/2024/09/23/screen_resolutions.html"><![CDATA[<p>This is for the nerds, but in Terminal I have added some aliases to my <code class="language-plaintext highlighter-rouge">~/.bashrc</code> file to make it easier to change screen resolutions:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// add to the bottom
 alias mouse1="xinput set-prop 10 \"libinput Accel Speed\" 0"
@@ -787,6 +852,4 @@ $ sudo apt install winehq-devel
   <li><a href="https://appdb.winehq.org/">Wine AppDB</a></li>
   <li><a href="https://www.protondb.com">ProtonDB</a></li>
   <li><a href="https://github.com/FunkyFr3sh/cnc-ddraw/releases">CNC-DDraw</a></li>
-</ul>]]></content><author><name></name></author><category term="blog" /><category term="sticky" /><category term="linux" /><category term="wine" /><summary type="html"><![CDATA[Some pointers about Wine on Linux.]]></summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2023/05/15/hello_world.html" rel="alternate" type="text/html" title="Hello World" /><published>2023-05-15T00:00:00-06:00</published><updated>2023-05-15T00:00:00-06:00</updated><id>http://localhost:4000/2023/05/15/hello_world</id><content type="html" xml:base="http://localhost:4000/2023/05/15/hello_world.html"><![CDATA[<p>A beginning is the time for taking the most delicate care that the balances are correct. This every sister of the Bene Gesserit knows. To begin your study of the life of Muad’Dib, then, take care that you first place him in his time: born in the 57th year of the Padishah Emperor, Shaddam IV. And take the most special care that you locate Muad’Dib in his place: the planet Arrakis. Do not be deceived by the fact that he was born on Caladan and lived his first fifteen years there. Arrakis, the planet known as Dune, is forever his place.</p>
-
-<p>— from “Manual of Muad’Dib” by the Princess Irulan</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[A beginning is a delicate time.]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="blog" /><category term="sticky" /><category term="linux" /><category term="wine" /><summary type="html"><![CDATA[Some pointers about Wine on Linux.]]></summary></entry></feed>
