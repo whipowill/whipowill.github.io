@@ -2038,7 +2038,6 @@ a {
     font-size: 2em !important;
   }
   nav {
-    font-size: 0.9em;
     text-align: left !important;
     margin-top: 0 !important;
   }
@@ -2079,7 +2078,6 @@ a {
     font-size: 2em !important;
   }
   nav {
-    font-size: 0.9em;
     text-align: left !important;
     margin-top: 0 !important;
   }
@@ -2120,7 +2118,6 @@ a {
     font-size: 2em !important;
   }
   nav {
-    font-size: 0.9em;
     text-align: left !important;
     margin-top: 0 !important;
   }
@@ -2161,7 +2158,6 @@ a {
     font-size: 2em !important;
   }
   nav {
-    font-size: 0.9em;
     text-align: left !important;
     margin-top: 0 !important;
   }
@@ -2356,7 +2352,7 @@ nav ul li {
   display: inline;
 }
 nav ul li a {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #611400;
   text-decoration: none;
 }
